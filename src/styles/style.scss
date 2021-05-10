@@ -23,6 +23,7 @@ header > div, #content-root {
   display: flex;
   max-width: 1530px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
@@ -176,5 +177,40 @@ button[class="cui-button"] {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 45px;
+  }
+
+  #home-main {
+    background-color: #F4F5F7;
+  }
+
+  #article-main {
+    padding: 15px 21px;
+
+    .card-root {
+      border-left: none;
+      border-right: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .card-root {
+    padding: 21px 15px;
+    border-radius: 0;
+  }
+
+  #home-sidebar-root {
+    display: none;
+  }
+
+  #content-root {
+    padding: 0;
+    margin-top: 0;
   }
 }

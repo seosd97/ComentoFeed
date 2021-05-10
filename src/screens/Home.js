@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div id="content-root">
       <HomeSideBar />
-      <main>
+      <main id="home-main">
         <ArticleFeed />
       </main>
     </div>
