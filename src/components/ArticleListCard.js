@@ -2,29 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../styles/style.scss';
 import Card from './Card';
+import moment from 'moment';
 
-const ArticleListCard = () => {
+const ArticleListCard = ({ article = {} }) => {
   return (
     <Card>
       <section className="card-header">
-        <span className="header-text">category</span>
-        <span className="header-text ml-end">id</span>
+      <span className="header-text">category</span>
+        <span className="header-text ml-end">{article.id}</span>
       </section>
       <ul className="card-content-info">
-        <li className="highlight">userid</li>
-        <li>created_at</li>
+        <li className="highlight">{article.user_id}</li>
+        <li>{`created_at(${moment(article.created_at).format('YYYY-MM-DD')})`}</li>
       </ul>
       <section className="card-content">
-        <h1 className="elipse-text">title </h1>
-        <div className="content-desc elipse-text">description</div>
+        <h1 className="elipse-text">{article.title}</h1>
+        <div className="elipse-text content-desc">{article.contents}</div>
       </section>
     </Card>
   );
 };
 
 ArticleListCard.propTypes = {
-  article: PropTypes.shape({}),
-  type: PropTypes.string,
+  article: PropTypes.object,
 }
 
 export default ArticleListCard;
