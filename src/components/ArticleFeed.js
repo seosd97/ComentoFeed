@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ArticleCard from './ArticleCard';
+import ArticleListCard from './ArticleListCard';
 
 const ArticleFeed = () => {
   return (
     <div className="article-feed">
       <Link to="/0">
-        <ArticleCard />
+        <ArticleListCard />
       </Link>
     </div>
   )
