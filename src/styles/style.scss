@@ -62,7 +62,7 @@ button[class="cui-button"] {
   margin-right: 40px;
 }
 
-.article-card {
+.card-root {
   display: flex;
   flex-direction: column;
   background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -71,10 +71,11 @@ button[class="cui-button"] {
   margin-bottom: #FFFFFF;
   padding: 20px 30px;
 
-  .article-header {
+  .card-header {
     display: flex;
     align-items: center;
     padding-bottom: 11px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #E1E4E7;
 
     .header-text {
@@ -84,8 +85,8 @@ button[class="cui-button"] {
     }
   }
 
-  .article-info {
-    margin-top: 15px;
+  .card-content-info {
+    margin-top: 5px;
     margin-bottom: 17px;
     padding: 0;
 
@@ -110,17 +111,17 @@ button[class="cui-button"] {
     }
   }
 
-  .article-preview {
+  .card-content {
     h1 {
       display: -webkit-box;
       margin: 0;
       color: #282C30;
       font-weight: bold;
       font-size: 18px;
-      margin-bottom: 6px;
     }
 
-    .article-desc {
+    .content-desc {
+      margin-top: 6px;
       letter-spacing: 0px;
       color: #495057;
       font-size: 16px;
@@ -136,10 +137,44 @@ button[class="cui-button"] {
       text-overflow: ellipsis;
     }
   }
+
+  .card-footer {
+    margin-top: 15px;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #ADB5BD;
+  }
+}
+
+.highlight-card-border {
+  border-color: #00C854;
 }
 
 .article-feed {
   a {
     text-decoration: none;
+  }
+}
+
+.comment-list-root {
+  margin-top: 31px;
+  
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #495057;
+
+    & > span {
+      color: #00C854;
+    }
+  }
+
+  .card-root {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
